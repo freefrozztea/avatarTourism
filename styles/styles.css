@@ -49,7 +49,7 @@ body{
 }
 
 /* NAVBAR */
-
+/*
 .hamburguer{
     display: flex;
     position: fixed;
@@ -69,10 +69,18 @@ body{
     -moz-transition: .5s;
     -ms-transition: .5s;
     -o-transition: .5s;
-    */
+    *//*
     cursor: pointer;
     box-shadow: 0 0 0.3rem rgba(0, 0, 0, .7);
     z-index: 1000;
+}
+*/
+
+.hamburger div{
+    width: 25px;
+    height: 5px;
+    background-color: #000000;
+    margin: 5px;
 }
 
 .nav{
@@ -81,10 +89,9 @@ body{
     position: fixed;
     display: flex;
     justify-content: space-evenly; 
-    text-align: center;
 }
 
-.nav a:hover{
+.nav-links a:hover{
     color:#789fff;
     font-size: 1.5rem;
 }
@@ -342,11 +349,11 @@ footer{
         -moz-transition: transform .3s ease-in-out;
         -ms-transition: transform .3s ease-in-out;
         -o-transition: transform .3s ease-in-out;
-        transform: translate(110%);
-        -webkit-transform: translate(110%);
-        -moz-transform: translate(110%);
-        -ms-transform: translate(110%);
-        -o-transform: translate(110%);
+        transform: translate(0%);
+        -webkit-transform: translate(0%);
+        -moz-transform: translate(0%);
+        -ms-transform: translate(0%);
+        -o-transform: translate(0%);
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -354,6 +361,11 @@ footer{
         display: inline-block;
         padding-top: 2;
         margin: 0.5rem 0;
+    }
+
+    .logo-img{
+        background-size: cover;
+        height: 2.3rem;
     }
 
     .titulo{
@@ -463,21 +475,42 @@ footer{
 /* DESKTOP */
 
 @media screen and (min-width: 1024px){
-    .hamburguer{
+    
+    .hamburger{
         display: none;
     }
     
     .nav{
         padding-top: 1rem;
         width: 100vw;
-        height: 10vh;
-        justify-content: center;
-        flex-direction: row;
+        min-height: 8vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-links{
+        margin-left: 3rem;
+        list-style: none;
+        display: flex;
     }
 
     .nav a{
         padding-right: 3rem;
         padding-top: 1.2rem;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+
+    .logo{
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 22px;
+        margin-right: 2rem;
+    }
+
+    .logo-img{
+        background-size: cover;
+        height: 2.3rem;
     }
 
     .titulo{

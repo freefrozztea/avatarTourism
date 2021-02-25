@@ -77,6 +77,11 @@ body{
     height: 4px;
     background-color: #000000;
     margin: 5px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .nav{
@@ -607,4 +612,24 @@ footer{
         -ms-transform: translateX(0px);
         -o-transform: translateX(0px);
     }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-10px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-10px, 6px);
+    -moz-transform: rotate(-45deg) translate(-10px, 6px);
+    -ms-transform: rotate(-45deg) translate(-10px, 6px);
+    -o-transform: rotate(-45deg) translate(-10px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-10px, -6px);
+    -webkit-transform: rotate(45deg) translate(-10px, -6px);
+    -moz-transform: rotate(45deg) translate(-10px, -6px);
+    -ms-transform: rotate(45deg) translate(-10px, -6px);
+    -o-transform: rotate(45deg) translate(-10px, -6px);
 }

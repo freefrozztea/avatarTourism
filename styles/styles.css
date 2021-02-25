@@ -49,36 +49,32 @@ body{
 }
 
 /* NAVBAR */
-/*
-.hamburguer{
-    display: flex;
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background: rgba(253, 223, 223, 0.5);
-    width: 2.4rem;
-    height: 2.4rem;
-    border-radius: 0.2rem;
-    -webkit-border-radius: 0.2rem;
-    -moz-border-radius: 0.2rem;
-    -ms-border-radius: 0.2rem;
-    -o-border-radius: 0.2rem;
-    /*
-    transition: .5s;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    *//*
-    cursor: pointer;
-    box-shadow: 0 0 0.3rem rgba(0, 0, 0, .7);
-    z-index: 1000;
+
+.logo{
+    height: 8vh;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    margin-right: 2rem;
 }
-*/
+
+.logo-img{
+    height: 6vh;
+    background-size: cover;
+    height: 2.3rem;
+}
+
+.logo h4{
+    height: 2vh;
+}
+
+.hamburger{
+    display: none;
+}
 
 .hamburger div{
     width: 25px;
-    height: 5px;
+    height: 4px;
     background-color: #000000;
     margin: 5px;
 }
@@ -88,12 +84,28 @@ body{
     right: 0;
     position: fixed;
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-around;
+    min-height: 8vh;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+    list-style: none;
+}
+
+.nav-links a{
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #f2f2f2;
+    -webkit-text-stroke: 2px #6c63ff;
 }
 
 .nav-links a:hover{
     color:#789fff;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    -webkit-text-stroke: 2px #ff6584;
 }
 
 /* SERVICIOS */
@@ -332,40 +344,78 @@ footer{
 
 /* MOBILE FIRST */
 
+@media screen and (max-width: 896px) /*en vez de 768*/ {
 
-@media screen and (max-width: 420px) {
+    .hamburger{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger div{
+        width: 2rem;
+        height: 4px;
+        background-color: #000000;
+        margin: 0.25rem;
+    }
 
     .nav{
-        width: 50vw;
-        height: 100vh;
+        width: 100vw;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
         background: #e1eec3;
         background: -webkit-linear-gradient(to right, #f05053, #e1eec3);
         background: linear-gradient(to right, #f05053, #e1eec3);
-        align-items: center;
+        display: flex;
         flex-direction: column;
-        z-index: 100;
-        transition: transform .3s ease-in-out;
-        -webkit-transition: transform .3s ease-in-out;
-        -moz-transition: transform .3s ease-in-out;
-        -ms-transition: transform .3s ease-in-out;
-        -o-transition: transform .3s ease-in-out;
-        transform: translate(0%);
-        -webkit-transform: translate(0%);
-        -moz-transform: translate(0%);
-        -ms-transform: translate(0%);
-        -o-transform: translate(0%);
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: space-around;
+        width: 60vw;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        -webkit-transition: transform 0.5s ease-in-out;
+        -moz-transition: transform 0.5s ease-in;
+        -ms-transition: transform 0.5s ease-in;
+        -o-transition: transform 0.5s ease-in;
 }
 
-    .nav a{
-        display: inline-block;
-        padding-top: 2;
-        margin: 0.5rem 0;
+    .nav-links a{
+        text-decoration: none;
     }
 
+    .logo{
+        position: absolute;
+        left: 1rem;
+        top: 1.5rem;
+        display: flex;
+        max-height: 8vh;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 22px;
+        margin-right: 2rem;
+        margin-top: 0.3rem;
+        align-items: center;
+        flex-direction: column;
+    }
+    
     .logo-img{
         background-size: cover;
-        height: 2.3rem;
+        height: 1.5rem;
+    }
+    
+    .logo h4{
+        font-size: 0.5rem;     
     }
 
     .titulo{
@@ -428,29 +478,21 @@ footer{
     }
 }
 
-/* TABLET */
+/* TABLET -- decidi 1024 en vez de 768*/
 
-@media screen and (min-width: 801px) and (max-width: 1023px){
-    .hamburguer{
+
+@media screen and (max-width: 1024px){
+    .hamburger{
         top: 1rem;
         right: 1rem;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 0.2rem;
-        -webkit-border-radius: 0.2rem;
-        -moz-border-radius: 0.2rem;
-        -ms-border-radius: 0.2rem;
-        -o-border-radius: 0.2rem;
-        cursor: pointer;
-        box-shadow: 0 0 0.3rem rgba(0, 0, 0, .7);
       }
-  
+    /*
     .nav{
         width: 60vw;
         height: 100vh;
-        background: #e1eec3;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
+        background: #e1eec3;
+        background: -webkit-linear-gradient(to right, #f05053, #e1eec3);
+        background: linear-gradient(to right, #f05053, #e1eec3);
         z-index: 100;
         transition: transform .3s ease-in-out;
         -webkit-transition: transform .3s ease-in-out;
@@ -464,7 +506,7 @@ footer{
         -o-transform: translate(110%);
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     }
-
+    */
     .titulo{
         text-align: center;
         padding-right: 1rem;
@@ -475,10 +517,6 @@ footer{
 /* DESKTOP */
 
 @media screen and (min-width: 1024px){
-    
-    .hamburger{
-        display: none;
-    }
     
     .nav{
         padding-top: 1rem;
@@ -494,23 +532,11 @@ footer{
         display: flex;
     }
 
-    .nav a{
+    .nav-links a{
         padding-right: 3rem;
         padding-top: 1.2rem;
-        letter-spacing: 3px;
-        font-weight: bold;
-    }
-
-    .logo{
-        text-transform: uppercase;
         letter-spacing: 5px;
-        font-size: 22px;
-        margin-right: 2rem;
-    }
-
-    .logo-img{
-        background-size: cover;
-        height: 2.3rem;
+        font-weight: bold;
     }
 
     .titulo{
@@ -555,4 +581,13 @@ footer{
         width: 30%;
     }
 }
+
+.nav-active{
+    transform: translate(0%);
+    -webkit-transform: translate(0%);
+    -moz-transform: translate(0%);
+    -ms-transform: translate(0%);
+    -o-transform: translate(0%);
+}
+
 

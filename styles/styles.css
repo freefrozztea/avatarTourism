@@ -477,9 +477,70 @@ footer{
     .cont-experto{
         width: 60%;
     }
-
+    
     footer{
-        height: 30vh;
+        height: 33vh;
+        background: rgba(159, 138, 208, 0.61);
+    }
+
+    .footer-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;      
+    }
+    
+    .contact-us{
+        width: 100%;
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .brand{
+        font-weight: 500;
+        font-size: 2.1rem;
+    }
+    
+    .brand+p{
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+    
+    .social-media{
+        margin-top: 1.3rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .social-media h4{
+        margin-left: 1rem;
+        width: 100%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    
+    .social-media-icon{
+        display: inline-block;
+        width: 2.2rem;
+        height: 2.2rem;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-top: 1rem;
+    }
+    
+    .social-media-icon img{
+        padding-top: 5px;
+    }
+    
+    .social-media-icon:hover{
+        background: #ffffff;
+        color: #f18cd1;
     }
 }
 
